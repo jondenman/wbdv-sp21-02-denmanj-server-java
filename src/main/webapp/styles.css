@@ -9,3 +9,8 @@
 .container {
     padding: 65px;
 }
+
+.fas fa-times float-right{
+    font-size: 1.5em;
+    vertical-align: center;
+}
