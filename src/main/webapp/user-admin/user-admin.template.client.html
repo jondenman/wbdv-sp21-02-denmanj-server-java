@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <a href="../index.html">
+            <h1>
+                User Admin
+            </h1>
+        </a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Role</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th><input class="wbdv-username-fld form-control" placeholder="Username"></th>
+                        <th><input class="wbdv-password-fld form-control" placeholder="Password" type="password"></th>
+                        <th><input class="wbdv-firstname-fld form-control" placeholder="First Name"></th>
+                        <th><input class="wbdv-lastname-fld form-control" placeholder="Last Name"></th>
+                        <th><select class="wbdv-semester-fld form-control">
+                            <option value="FACULTY">Faculty</option>
+                            <option value="STUDENT">Student</option>
+                            <option value="ADMIN">Admin</option>
+                        </select>
+                        </th>
+                        <th class="pull-right" style="white-space: nowrap">
+                            <button class="fas fa-plus wbdv-create-btn"></button>
+                            <button class="fas fa-check wbdv-update-btn"></button>
+                        </th>
+                    </tr>
+
+                </thead>
+            </table>
+    </div>
+
+</body>
+</html>
