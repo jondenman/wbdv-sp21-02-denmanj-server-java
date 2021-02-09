@@ -22,8 +22,8 @@ function renderUsers(users) {
                 <td>${user.lastname}</td>
                 <td>${user.role}</td>
                 <td class="pull-right" style="white-space: nowrap">
-                    <button id="${i}" class="wbdv-delete-btn">Delete</button>
-                    <button id="${user._id}" class="wbdv-select-btn">Select</button>
+                    <i id="${i}" class="fa-2x fa fa-times wbdv-delete-btn"></i>
+                    <i id="${user._id}" class="fa-2x fas fa-pencil wbdv-select-btn"></i>
                 </td>
             </tr>
             `)
@@ -35,7 +35,7 @@ function renderUsers(users) {
 function createUser() {
     var newUser = {
         username: $usernameFld.val(),
-        firstname: $usernameFld.val(),
+        firstname: $firstNameFld.val(),
         lastname: $lastNameFld.val(),
         role: $roleFld.val()
     }
@@ -48,7 +48,6 @@ function createUser() {
 }
 
 function deleteUser(event) {
-    alert("delete user")
     var button = $(event.target)
     var index = button.attr("id")
     var id = users[index]._id
