@@ -30,6 +30,7 @@ function renderUsers(users) {
     }
     $(".wbdv-delete-btn").click(deleteUser)
     $(".wbdv-select-btn").click(selectUser)
+    console.log("ha")
 }
 
 function createUser() {
@@ -37,14 +38,17 @@ function createUser() {
         username: $usernameFld.val(),
         firstname: $firstNameFld.val(),
         lastname: $lastNameFld.val(),
-        role: $roleFld.val()
+        role: $roleFld.val(),
+        num: 1
     }
 
+    return (
     userService.createUser(newUser)
         .then(function (actualUser) {
             users.push(actualUser)
             renderUsers(users)
         })
+    )
 }
 
 function deleteUser(event) {
@@ -82,7 +86,7 @@ function updateUser() {
         })
 }
 
-function main() {
+function init() {
     $userRowTemplate = $(".wbdv-tbody")
     $createBtn = $(".wbdv-create-btn")
     $updateBtn = $(".wbdv-update-btn")
@@ -94,6 +98,7 @@ function main() {
 
     renderUsers(users)
 
+
     $updateBtn.click(updateUser)
     $createBtn.click(createUser)
 
@@ -102,4 +107,4 @@ function main() {
         renderUsers(users)
     })
 }
-$(main)
+$(init)
